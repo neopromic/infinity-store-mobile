@@ -8,7 +8,7 @@ export function Home() {
 		<Container>
 			<StatusBar backgroundColor={colors.background} />
 			<HeaderView>
-				<SearchProductsView placeholder="Procure por produtos..." className="" />
+				<SearchProductsView placeholder="Procure por produtos..." />
         <Button>
           <ButtonText>
             <ShoppingCart />
