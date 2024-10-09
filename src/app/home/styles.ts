@@ -25,6 +25,7 @@ export const HeaderView = styled.View`
   display: flex;
   flex-direction: row;
   gap: 8px;
+  position: sticky;
 `;
 
 export const Button = styled(TouchableOpacity)`
@@ -56,4 +57,5 @@ export const SearchProductsView = styled.TextInput.attrs({
   border-radius: 8px;
   padding: 4px 8px;
   accent-color: ${theme.colors.accent};
+  width: 80%;
 `;
