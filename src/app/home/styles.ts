@@ -1,5 +1,5 @@
 import styled from "styled-components/native";
-import { colors } from "../colors";
+import { colors, theme } from "../colors";
 import { TouchableOpacity } from "react-native";
 
 export const Container = styled.SafeAreaView`
@@ -48,12 +48,12 @@ export const ButtonText = styled.Text`
   font-weight: bold;
 `;
 
-export const SearchProductsView = styled.TextInput`
+export const SearchProductsView = styled.TextInput.attrs({
+  selectionColor: colors.primary[600],
+})`
   outline: none;
-  border: 1px solid ${colors.border};
+  border: 2px solid ${colors.border};
   border-radius: 8px;
-  padding: 4px 8px ;
-  :focus {
-    
-  }
+  padding: 4px 8px;
+  accent-color: ${theme.colors.accent};
 `;
