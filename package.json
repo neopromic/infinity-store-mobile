@@ -14,7 +14,6 @@
     "phosphor-react-native": "^2.2.1",
     "react": "18.2.0",
     "react-native": "0.74.5",
-    "react-native-icons": "^0.7.1",
     "react-native-typography": "^1.4.1",
     "react-native-vector-icons": "^10.2.0",
     "styled-components": "^6.1.13"

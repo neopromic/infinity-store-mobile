@@ -23,9 +23,6 @@ importers:
       react-native:
         specifier: 0.74.5
         version: 0.74.5(@babel/core@7.25.7)(@babel/preset-env@7.25.7(@babel/core@7.25.7))(@types/react@18.2.79)(react@18.2.0)
-      react-native-icons:
-        specifier: ^0.7.1
-        version: 0.7.1
       react-native-typography:
         specifier: ^1.4.1
         version: 1.4.1(react-native@0.74.5(@babel/core@7.25.7)(@babel/preset-env@7.25.7(@babel/core@7.25.7))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0)
@@ -3136,9 +3133,6 @@ packages:
 
   react-is@18.3.1:
     resolution: {integrity: sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==}
-
-  react-native-icons@0.7.1:
-    resolution: {integrity: sha512-UigJh4CQ+NmRThGm/7MlkdCnuR0u3Bx3EO60gKCDNeMGM6X+vfYMVUXnruefJ5SrcSguQhkFLSS0oPm9B4+FDg==}
 
   react-native-svg@15.7.1:
     resolution: {integrity: sha512-Xc11L4t6/DtmUwrQqHR7S45Qy3cIWpcfGlmEatVeZ9c1N8eAK79heJmGRgCOVrXESrrLEHfP/AYGf0BGyrvV6A==}
@@ -7941,8 +7935,6 @@ snapshots:
   react-is@17.0.2: {}
 
   react-is@18.3.1: {}
-
-  react-native-icons@0.7.1: {}
 
   react-native-svg@15.7.1(react-native@0.74.5(@babel/core@7.25.7)(@babel/preset-env@7.25.7(@babel/core@7.25.7))(@types/react@18.2.79)(react@18.2.0))(react@18.2.0):
     dependencies:
