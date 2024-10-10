@@ -1,34 +1,60 @@
-import { StatusBar, Text, View } from "react-native";
+import { StatusBar, View } from "react-native";
 import {
 	Button,
 	ButtonText,
 	Container,
+	DefaultText,
 	HeaderView,
+	ProductSectionTitle,
+	ProductSectionView,
 	SearchProductsView,
 } from "./styles";
 import { colors } from "@/app/colors";
-import { ShoppingCart } from "phosphor-react-native";
+import { Flame, ShoppingCart } from "phosphor-react-native";
+import { material } from "react-native-typography";
 
 export function Home() {
 	return (
 		<Container>
+			{/* Status bar configurada para combinar com o background */}
 			<StatusBar backgroundColor={colors.background} />
 			<HeaderView>
-				<SearchProductsView placeholder="Procure por produtos..." />
-				<Button
-					style={{
-						borderBottomWidth: 0,
-						borderColor: "transparent",
-					}}
-				>
+				{/* Campo de busca */}
+				<SearchProductsView
+					autoFocus={false}
+					placeholder="Procure por produtos..."
+				/>
+
+				{/* Botão do carrinho de compras */}
+				<Button>
 					<ButtonText>
 						<ShoppingCart />
 					</ButtonText>
 				</Button>
 			</HeaderView>
-			<View>
-				<Text>Test</Text>
-			</View>
+
+			{/* Seção de produtos */}
+			<ProductSectionView>
+				<View
+					style={{
+						display: "flex",
+						flexDirection: "row",
+						alignItems: "center",
+						width: "100%",
+						padding: 8,
+						alignContent: "center",
+					}}
+				>
+					<Flame
+						size={32}
+						style={{ marginRight: 8 }}
+						color={colors.primary[700]}
+					/>
+					<ProductSectionTitle style={material.headline}>
+						Lojas recomendadas
+					</ProductSectionTitle>
+				</View>
+			</ProductSectionView>
 		</Container>
 	);
 }
