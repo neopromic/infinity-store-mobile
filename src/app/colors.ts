@@ -18,5 +18,3 @@ export const theme = {
     accent: colors.primary[600],
   },
 };
-
-
