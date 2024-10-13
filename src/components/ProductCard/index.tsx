@@ -1,48 +1,42 @@
 import React from "react";
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
-import { colors } from "@/app/colors"; // Defina suas cores globais
+import { colors } from "@/app/colors";
+import type { Product } from "@/types/products";
 
-// Container principal do card
 const CardContainer = styled.View`
   background-color: ${colors.background};
   border-radius: 8px;
   overflow: hidden;
-  shadow-color: #000;
-  shadow-offset: 0px 2px;
-  shadow-opacity: 0.1;
-  shadow-radius: 5px;
-  elevation: 3;
-  width: 100%;
+  width: 200px;
+  border-width: 1px;
+  border-color: ${colors.border};
 `;
 
-// Imagem do produto
 const ProductImage = styled.Image`
   width: 100%;
   height: 150px;
 `;
 
-// Seção de texto do produto
 const ProductInfo = styled.View`
   padding: 10px;
 `;
 
-// Nome do produto
 const ProductName = styled.Text`
   font-size: 16px;
   font-weight: bold;
   color: ${colors.foregroud};
 `;
 
-// Preço do produto
 const ProductPrice = styled.Text`
   font-size: 14px;
   color: ${colors.primary[600]};
   margin-top: 5px;
 `;
 
-// Botão de ação (adicionar ao carrinho, por exemplo)
-const AddToCartButton = styled.TouchableOpacity`
+const AddToCartButton = styled.TouchableOpacity.attrs({
+	activeOpacity: 0.7,
+})`
   background-color: ${colors.primary[700]};
   padding: 10px;
   border-radius: 5px;
@@ -55,13 +49,6 @@ const AddToCartButtonText = styled.Text`
   font-weight: bold;
   font-size: 14px;
 `;
-
-export interface Product {
-	id: number;
-	name: string;
-	price: string;
-	image: string;
-}
 
 interface IProductCard {
 	product: Product;
