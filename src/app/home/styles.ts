@@ -59,9 +59,9 @@ export const SearchProductsView = styled.TextInput.attrs({
   width: 80%;
 `;
 
-export const ProductSectionView = styled.View`
+export const SectionView = styled.View`
   padding: 8px;
 `;
 
-export const ProductSectionTitle = styled.Text`
+export const SectionTitle = styled.Text`
 `;
