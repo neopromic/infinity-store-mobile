@@ -19,7 +19,13 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.creatttek.infinitymobile"
+      "package": "com.creattek.infinitymobile",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_FINE_LOCATION",
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -28,6 +34,12 @@
       "eas": {
         "projectId": "5b8e520b-7c9d-4393-a208-b1ab0e60db92"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/5b8e520b-7c9d-4393-a208-b1ab0e60db92"
     }
   }
 }
