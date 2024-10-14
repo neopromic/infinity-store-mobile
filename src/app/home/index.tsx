@@ -54,19 +54,28 @@ const recommendedStores: Business[] = [
 	{
 		id: 0,
 		businessName: "BikeShop",
-		businessLogo: "https://github.com/neopromic.png"
+		businessLogo: "https://github.com/neopromic.png",
 	},
 	{
 		id: 1,
 		businessName: "Barber for Mens",
-		businessLogo: "https://github.com/neopromic.png"
+		businessLogo: "https://github.com/neopromic.png",
+	},
+	{
+		id: 2,
+		businessName: "Test",
+		businessLogo: "https://github.com/neopromic.png",
 	},
 ];
 
 export function Home() {
 	return (
 		<Container>
-			<StatusBar backgroundColor={colors.background} />
+			<StatusBar
+				backgroundColor={colors.background}
+				animated
+				barStyle={"dark-content"}
+			/>
 			<HeaderView>
 				<SearchProductsView
 					autoFocus={false}
@@ -143,7 +152,7 @@ export function Home() {
 						)}
 						horizontal={true}
 						showsHorizontalScrollIndicator
-						contentContainerStyle={{ paddingHorizontal: 8, paddingBottom: 100 }}
+						contentContainerStyle={{ paddingHorizontal: 8, paddingVertical: 16 }}
 					/>
 				</SectionView>
 			</ScrollView>
