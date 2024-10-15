@@ -1,16 +1,19 @@
-import React from "react";
-import { View, Text, Image, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
 import { colors } from "@/app/colors";
 import type { Product } from "@/types/products";
+import { useNavigation } from "@react-navigation/native";
+import type { NativeStackNavigationProp } from "@react-navigation/native-stack"
 
-const CardContainer = styled.View`
+
+const CardContainer = styled.TouchableOpacity` 
   background-color: ${colors.background};
   border-radius: 8px;
   overflow: hidden;
-  width: 200px;
+  width: 100%;
+  height: 248px;
   border-width: 1px;
   border-color: ${colors.border};
+  margin: 1%;
 `;
 
 const ProductImage = styled.Image`
@@ -22,7 +25,9 @@ const ProductInfo = styled.View`
   padding: 10px;
 `;
 
-const ProductName = styled.Text`
+const ProductName = styled.Text.attrs({
+  numberOfLines: 2,
+})`
   font-size: 16px;
   font-weight: bold;
   color: ${colors.foregroud};
@@ -32,41 +37,31 @@ const ProductPrice = styled.Text`
   font-size: 14px;
   color: ${colors.primary[600]};
   margin-top: 5px;
-`;
-
-const AddToCartButton = styled.TouchableOpacity.attrs({
-	activeOpacity: 0.7,
-})`
-  background-color: ${colors.primary[700]};
-  padding: 10px;
-  border-radius: 5px;
-  margin-top: 10px;
-  align-items: center;
-`;
-
-const AddToCartButtonText = styled.Text`
-  color: white;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 500;
 `;
 
 interface IProductCard {
-	product: Product;
+  product: Product;
 }
+type RootStackParamList = {
+  viewProductPage?: { productId: number }; // Defina os parâmetros esperados pela tela de detalhes
+};
+
+type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'viewProductPage'>;
 
 export function ProductCard({ product }: IProductCard) {
-	return (
-		<CardContainer>
-			<ProductImage source={{ uri: product.image }} resizeMode="cover" />
+  const navigation = useNavigation<NavigationProp>();
 
-			<ProductInfo>
-				<ProductName>{product.name}</ProductName>
-				<ProductPrice>R$ {product.price}</ProductPrice>
+  return (
+    <CardContainer
+      onPress={() => navigation.navigate("viewProductPage")}
+    >
+      <ProductImage source={{ uri: product.image }} alt={product.name} resizeMode="cover" />
 
-				<AddToCartButton>
-					<AddToCartButtonText>Adicionar ao Carrinho</AddToCartButtonText>
-				</AddToCartButton>
-			</ProductInfo>
-		</CardContainer>
-	);
+      <ProductInfo>
+        <ProductName>{product.name}</ProductName>
+        <ProductPrice>R$ {product.price}</ProductPrice>
+      </ProductInfo>
+    </CardContainer>
+  );
 }

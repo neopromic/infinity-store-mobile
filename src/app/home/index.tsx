@@ -20,33 +20,38 @@ import type { Business, Product } from "@/types/products";
 const products: Product[] = [
 	{
 		id: 0,
-		image: "https://github.com/neopromic.png",
-		name: "Ferrari",
-		price: "200",
+		image:
+			"https://http2.mlstatic.com/D_NQ_NP_702077-MLA46545885288_062021-O.webp",
+		name: "Apple iPhone XR 128 GB - Branco",
+		price: "1.799",
 	},
 	{
 		id: 1,
-		image: "https://github.com/neopromic.png",
-		name: "Ferrari",
-		price: "200",
+		image:
+			"https://http2.mlstatic.com/D_NQ_NP_999878-MLU72827092602_112023-O.webp",
+		name: "Smart Tv Led 32 S5400af Tcl Fhd Android Tv",
+		price: "1.001",
 	},
 	{
 		id: 2,
-		image: "https://github.com/neopromic.png",
-		name: "Ferrari",
-		price: "200",
+		image:
+			"https://http2.mlstatic.com/D_NQ_NP_918171-MLU78330700182_082024-O.webp",
+		name: "Samsung Galaxy A05s 128 GB Dual SIM Tela Infinita de 6,7'' Cor Violeta 6 GB RAM",
+		price: "799",
 	},
 	{
 		id: 3,
-		image: "https://github.com/neopromic.png",
-		name: "Ferrari",
-		price: "200",
+		image:
+			"https://media.pichau.com.br/media/catalog/product/cache/2f958555330323e505eba7ce930bdf27/m/c/mcr-hzn21-bl116120v3216.jpg",
+		name: "Monitor Gamer Mancer Horizon Z21, 21.45 Pol, VA, FHD, 1ms, 75Hz, VGA/HDMI, MCR-HZN21-BL1",
+		price: "499,99",
 	},
 	{
 		id: 4,
-		image: "https://github.com/neopromic.png",
-		name: "Ferrari",
-		price: "200",
+		image:
+			"https://www.kabum.com.br/_next/image?url=https%3A%2F%2Fimages0.kabum.com.br%2Fprodutos%2Ffotos%2F437590%2Fplaca-de-video-rtx-4090-rog-strix-asus-nvidia-geforce-24-gb-gddr6x-argb-dlss-ray-tracing-branco-rog-strix-rtx4090-24g-white_1682338329_g.jpg&w=640&q=100",
+		name: "Placa de Vídeo RTX 4090 ROG Strix Asus NVIDIA GeForce, 24 GB GDDR6X, ARGB, DLSS, Ray Tracing, Branco - ROG-STRIX-RTX4090-24G-WHITE",
+		price: "11.949,99",
 	},
 ];
 
@@ -152,7 +157,10 @@ export function Home() {
 						)}
 						horizontal={true}
 						showsHorizontalScrollIndicator
-						contentContainerStyle={{ paddingHorizontal: 8, paddingVertical: 16 }}
+						contentContainerStyle={{
+							paddingHorizontal: 8,
+							paddingVertical: 16,
+						}}
 					/>
 				</SectionView>
 			</ScrollView>
